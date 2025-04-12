@@ -1,7 +1,7 @@
 
-variable "user_map" {
+variable "group_policies" {
   description = "Map of IAM user roles and user counts"
-  type = map(number)
+  type        = map(number)
   default = {
     system_admin    = 3
     database_admin  = 3
@@ -11,11 +11,12 @@ variable "user_map" {
 
 variable "group_policy_map" {
   description = "Map of groups and policies"
-  type = map(string)
+  type        = map(string)
   default = {
-    system_admin    = "arn:aws:iam::aws:policy/AdministratorAccess"
-    database_admin  = "arn:aws:iam::aws:policy/AmazonRDSFullAccess"
-    read_only       = "arn:aws:iam::aws:policy/AmazonConnectReadOnlyAccess"
+      system_admin   = "arn:aws:iam::aws:policy/AdministratorAccess"
+      database_admin = "arn:aws:iam::aws:policy/AmazonRDSFullAccess"
+      read_only      = "arn:aws:iam::aws:policy/AmazonConnectReadOnlyAccess"
   }
 }
+
 
