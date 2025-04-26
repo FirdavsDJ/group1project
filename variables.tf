@@ -19,4 +19,7 @@ variable "group_policy_map" {
   }
 }
 
+variable "env_type" {
+  type = string
+}
 
